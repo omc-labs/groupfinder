@@ -1,4 +1,4 @@
-# GroupFinder (OMC)
+# GroupFinder
 
 Encontre facilmente colegas por **grupo** e **turma**.  
 O app lista grupos **1–850**; cada pessoa informa **Nome**, **WhatsApp** e **LinkedIn**, seleciona a **Turma (001/002)** e pronto. Há **busca global** e **contador** de inscritos.
