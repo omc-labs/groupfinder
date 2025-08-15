@@ -7,7 +7,7 @@ O app lista grupos **1–850**; cada pessoa informa **Nome**, **WhatsApp** e **L
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - **Grupos 1–850** com contador total por grupo
 - **Turmas 001/002**: filtro no modal e escolha ao cadastrar
@@ -19,7 +19,7 @@ O app lista grupos **1–850**; cada pessoa informa **Nome**, **WhatsApp** e **L
 
 ---
 
-## 🧱 Arquitetura & Stack
+## Arquitetura & Stack
 
 - **Frontend:** HTML + CSS + JavaScript (vanilla)
 - **Backend:** PHP 7.4+ (recomendado PHP 8+)
@@ -46,7 +46,7 @@ data.backup.sqlite
 
 ---
 
-## 🧪 Modelos de dados
+## Modelos de dados
 
 **Tabela `groups`**
 
@@ -66,7 +66,7 @@ data.backup.sqlite
 
 ---
 
-## 🚀 Instalação
+## Instalação
 
 ### Opção A — cPanel/HostGator (produção)
 
@@ -163,7 +163,7 @@ GET ?api=search&q=texto_ou_numero
 
 ---
 
-## 🛠️ Como expandir
+##  Como expandir
 
 - **Mais turmas:**  
   Backend: ampliar `CHECK (turma IN (...))`; Front: adicionar opções no `<select>` e botões no filtro.
@@ -190,7 +190,7 @@ GET ?api=search&q=texto_ou_numero
 
 ---
 
-## 🤔 Por que PHP (e não Node) neste projeto?
+## Escolha da stack:
 
 **Cenário:** hospedagem compartilhada (cPanel/HostGator).  
 Em _shared hosting_, servidores **Node** (processos long-running) costumam não ser suportados ou são finalizados. Há restrições de portas, falta de PM2, necessidade de proxy reverso, etc.
@@ -207,7 +207,7 @@ Em _shared hosting_, servidores **Node** (processos long-running) costumam não 
 
 ---
 
-## 🧯 Troubleshooting
+## Troubleshooting
 
 - **`?api=health` → 403/404**: use `?api=...` (evite `index.php/...` em hosts que bloqueiam PATH_INFO).
 - **500 na API**: ver erros exibidos; confirme `sqlite3` habilitado e permissões (pasta 755, arquivos 644, `data.sqlite` 664).
@@ -216,7 +216,7 @@ Em _shared hosting_, servidores **Node** (processos long-running) costumam não 
 
 ---
 
-## 🔒 Privacidade & Segurança
+## Privacidade & Segurança
 
 - Dados coletados: **nome**, **WhatsApp**, **LinkedIn**, **turma**, **grupo**.
 - Recomendações:
@@ -226,7 +226,7 @@ Em _shared hosting_, servidores **Node** (processos long-running) costumam não 
 
 ---
 
-## 💾 Backup & Restauração
+## Backup & Restauração
 
 - **Backup:** baixe `data.sqlite` ou duplique para `data.backup.sqlite`.
 - **Restauração:** substitua o `data.sqlite` pelo backup.
@@ -234,7 +234,7 @@ Em _shared hosting_, servidores **Node** (processos long-running) costumam não 
 
 ---
 
-## 📜 Licença
+## Licença
 
 Escolha a licença (ex.: MIT).
 
@@ -246,7 +246,7 @@ Permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia
 
 ---
 
-## 🤝 Contribuindo
+## Contribuindo
 
 Issues e PRs são bem-vindos.  
 Antes de abrir PR, descreva a mudança (UI/DB/API), impacto em migração e, se possível, inclua um pequeno plano de rollback.
