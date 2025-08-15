@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Group Finder · Faculdade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Group Finder · Faculdade</h1>
+      <p>
+        Escolha seu grupo (1–850), preencha seus dados e encontre sua turma.
+      </p>
+      <div class="search">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Buscar por nome, WhatsApp, LinkedIn ou nº do grupo..."
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="searchResults" class="card hidden">
+        <h2>Resultados da busca</h2>
+        <div id="resultsList" class="list"></div>
+      </section>
+
+      <section>
+        <h2>Todos os grupos</h2>
+        <div id="groupsGrid" class="grid"></div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-content">
+        <button id="closeModal" class="close" aria-label="Fechar">×</button>
+        <h3 id="modalTitle">Grupo</h3>
+
+        <div class="filters">
+          <div class="segmented">
+            <button id="flt-all" type="button" class="active">Todas</button>
+            <button id="flt-001" type="button">001</button>
+            <button id="flt-002" type="button">002</button>
+          </div>
+        </div>
+
+        <div id="entries" class="list"></div>
+
+        <form id="entryForm" class="form">
+          <h4>Adicionar seu contato</h4>
+          <div class="row">
+            <label
+              >Nome completo
+              <input
+                type="text"
+                id="name"
+                required
+                maxlength="80"
+                placeholder="Seu nome"
+              />
+            </label>
+            <label
+              >WhatsApp (com DDD)
+              <input
+                type="tel"
+                id="whatsapp"
+                required
+                maxlength="20"
+                placeholder="+55 11 99999-9999"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <label
+              >Turma
+              <select id="turma" required>
+                <option value="001">001</option>
+                <option value="002">002</option>
+              </select>
+            </label>
+          </div>
+          <label
+            >URL do LinkedIn
+            <input
+              type="url"
+              id="linkedin"
+              required
+              placeholder="https://www.linkedin.com/in/seu-usuario"
+            />
+          </label>
+          <button class="primary" type="submit">Salvar</button>
+          <p class="hint">
+            Dica: seu LinkedIn precisa ser do domínio linkedin.com.
+          </p>
+          <div id="formMsg" class="msg"></div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="container">
+      <a href="https://ohmycodes.com" target="_blank">Feito com 💙 — OMC</a>
+    </footer>
+  </body>
+</html>
